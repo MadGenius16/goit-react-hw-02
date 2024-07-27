@@ -1,6 +1,6 @@
 
 
-const Options = ({updateFeedback, feedbackReset, totalFeedback}) => {
+const Options = ({updateFeedback, feedbackReset, totalFeedback, }) => {
   return (
     <div>
       <button type='button' onClick={()=> updateFeedback("good")}>Good</button>

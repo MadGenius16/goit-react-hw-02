@@ -9,7 +9,9 @@ function App() {
 const [feedback, setFeedback] =useState({
   good: 0,
 	neutral: 0,
-	bad: 0
+	bad: 0,
+  total: 0,
+  Positive: 0
 })
 
 const updateFeedback = (feedbackType) => {
@@ -17,11 +19,15 @@ const updateFeedback = (feedbackType) => {
  }
 
  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100)
+
 
 const feedbackReset = ()=> setFeedback({
   good: 0,
 	neutral: 0,
-	bad: 0})
+	bad: 0,
+  total: 0,
+  Positive: 0})
 
 
   return (
@@ -34,7 +40,7 @@ const feedbackReset = ()=> setFeedback({
       totalFeedback={totalFeedback}
     />
 
-    {totalFeedback !==0 ? <Feedback feedback={feedback}/> : <Notification />}
+    {totalFeedback !==0 ? <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback= {positiveFeedback}/> : <Notification />}
 
     </div>
   )
