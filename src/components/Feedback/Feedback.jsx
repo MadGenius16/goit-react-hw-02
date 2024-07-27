@@ -1,8 +1,14 @@
-import React from 'react'
 
-const Feedback = () => {
+
+const Feedback = ({feedback: {good, neutral, bad} }) => {
   return (
-    <div>Feedback</div>
+    <div>
+      <ul>
+        <li>Good: {good}</li>
+        <li>Neutral: {neutral}</li>
+        <li>Bad: {bad}</li>
+      </ul>
+    </div>
   )
 }
 
