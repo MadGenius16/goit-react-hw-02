@@ -11,7 +11,6 @@ const Options = ({updateFeedback, feedbackReset, totalFeedback, }) => {
 
       {totalFeedback !==0 ? <button className={css.button} type='button' onClick={feedbackReset} > Reset </button> : <div></div>}
     </div>
-  
   )
 }
 
