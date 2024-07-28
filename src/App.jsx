@@ -10,7 +10,7 @@ function App() {
 
   const [feedback, setFeedback] = useState(() => {
     const localStorageData = localStorage.getItem("feedback")
-    if (localStorageData !== 0) {
+    if (localStorageData !== null) {
       return JSON.parse(localStorageData)
     }
     return ({
