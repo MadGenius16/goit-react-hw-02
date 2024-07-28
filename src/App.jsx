@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import './App.css'
+import css from '../src/App.module.css'
 import Description from './components/Description/Description'
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
 import Notification  from './components/Notification/Notification'
+
 
 function App() {
 const [feedback, setFeedback] =useState({
@@ -31,7 +32,7 @@ const feedbackReset = ()=> setFeedback({
 
 
   return (
-    <div>
+    <div className={css.container}>
     <Description />
     
     <Options 
